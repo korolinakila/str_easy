@@ -27,4 +27,12 @@ double itc_percent_lower_uppercase(string str){
     }
 
 return(k/K*100);
-}
+} //7
+
+string itc_reverse_str(string str){
+    string S1="";
+    for (int i=0; str[i]!='\0'; i++){
+         S1+= str[itc_len(str)-(i+1)];
+    }
+    return S1;
+}   //8

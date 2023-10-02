@@ -31,4 +31,15 @@ if (itc_len(str) <= 5){
 else{
     cout << str[0] << str[1] << str[2] << str[itc_len(str)-1] << str[itc_len(str)-2] << str[itc_len(str)-3];
 }
+}   //4
+
+int itc_count_char_in_str(char ch, string str){
+int k=0;
+for (int i=0; str[i]!='\0'; i++){
+    if (str[i]==ch){
+        k+=1;
+    }
 }
+return k;
+}   //5
+

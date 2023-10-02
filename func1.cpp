@@ -9,7 +9,11 @@ string itc_hello_str(string name){
 
 
 long long itc_len(string str){
-    return str.length();
+    long long k;
+    for(long long i=0; str[i]!='\0'; i++){
+    k = i;
+    }
+    return k+1;
 }   //2
 
 void itc_print_copy_str(string str, int number){
@@ -19,8 +23,12 @@ for(int i=0; i<number; i++){
 }   //3
 
 void itc_first_end_three(string str){
-if (str.size() <= 5){
-    char ch = str[0];
-    itc_print_copy_str(ch, str.size());
+if (itc_len(str) <= 5){
+        for(int i=0; i!=itc_len(str); i++){
+            cout << str[0];
+        }
+}
+else{
+    cout << str[0] << str[1] << str[2] << str[itc_len(str)-1] << str[itc_len(str)-2] << str[itc_len(str)-3];
 }
 }

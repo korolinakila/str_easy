@@ -36,3 +36,31 @@ string itc_reverse_str(string str){
     }
     return S1;
 }   //8
+
+string itc_slice_str(string str, int start, int end){
+string S1="";
+if(start>itc_len(str)){
+    for (int i=0; i<=itc_len(str); i++){
+         S1+= str[i];
+    }
+    return S1;
+    }
+
+    if(end<=itc_len(str)){
+    for (int i=start; i<=end; i++){
+         S1+= str[i];
+    }
+    return S1;
+    }
+    if(end>itc_len(str)){
+    for (int i=start; i<=itc_len(str); i++){
+         S1+= str[i];
+    }
+    return S1;
+    }
+return S1;
+}   //9
+
+bool itc_equal_reverse(string str){
+return str==itc_reverse_str(str);
+}   //10

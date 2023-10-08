@@ -70,6 +70,7 @@ if(itc_find_str(str1, str2)!=-1){
         S1+=str3[k];
         m+=1;
     }
+    m+=itc_len(str2)-itc_len(str3);
     for (int g=m; g<itc_len(str1); g++){
          S2+= str1[g];
     }
@@ -85,17 +86,38 @@ while(itc_find_str(S2, str2)!=-1){
         S1+=str3[k];
         m+=1;
     }
+    m+=itc_len(str2)-itc_len(str3);
     S2="";
     for (int g=m; g<itc_len(str1); g++){
          S2+= str1[g];
     }
+    if (S2==""){
+    return S1;
+    }
 }
 if(itc_find_str(S2, str2)==-1){
-int y=m;
-for (int i=m; i<(itc_len(str1)+y); i++){
+for (int i=m; i<(itc_len(str1)); i++){
          S1+= str1[i];
 
     }
 }
+
 return S1;
-}
+}   //14
+
+int itc_max_char_on_end(string str){
+int m=0, n=0;
+    str+='a';
+    for (int i=0; i<itc_len(str); i++){
+         if(str[i]>='0' && str[i]<='9'){
+            n+=1;
+         }
+         if (str[i]<'0' || str[i]>'9'){
+            if (m<n){
+                m=n;
+            }
+            n=0;
+         }
+    }
+    return m;
+}   //15

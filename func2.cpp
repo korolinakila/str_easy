@@ -4,12 +4,11 @@
 using namespace std;
 string itc_even_place(string str){
     string S1="";
-    for (int i=0; str[i]!='\0'; i++){
-        if (str[i]>='0' && str[i]<'9' && str[i]%2==0){
+    for(int i=1; i<itc_len(str); i+=2){
             S1 += str[i];
         }
-    }
-    if(S1==""){
+
+    if(itc_len(str)<2){
         return "-1";
     }
 return(S1);

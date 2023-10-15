@@ -22,18 +22,26 @@ string itc_cmp_str(string str1, string str2, int num){
     return S1;
     }
     else{
-    int m=0;
-    for (int i=0; i!=num; i++){
-         S1+= str1[i];
-         m=i;
-    }
-    for (int k=0; k<itc_len(str2); k++){
-         S1+= str2[k];
-    }
-    for (int y=m+1; y<=(itc_len(str1)-itc_len(str2)-1); y++){
-         S1+= str1[y];
-    }
-    return S1;
+        int m=0;
+        for (int i=0; i!=num; i++){
+            S1+= str1[i];
+            m+=1;
+        }
+        for (int k=0; k<itc_len(str2); k++){
+            S1+= str2[k];
+        }
+        if(m==0){
+            for (int y=m; y<=(itc_len(str1)-itc_len(str2)-1); y++){
+                S1+= str1[y];
+            }
+            return S1;
+        }
+        else{
+            for (int y=m; y<=(itc_len(str1)-itc_len(str2)-1); y++){
+                S1+= str1[y];
+            }
+            return S1;
+        }
     }
     return S1;
 }   //11

@@ -6,7 +6,13 @@ using namespace std;
 string itc_cmp_str(string str1, string str2, int num){
     string S1="";
     if(str2==""){
-        for (int i=0; i<=itc_len(str1); i++){
+        for (int i=0; i<itc_len(str1); i++){
+         S1+= str1[i];
+    }
+    return S1;
+    }
+    if(num>itc_len(str1)){
+         for (int i=0; i<itc_len(str1); i++){
          S1+= str1[i];
     }
     return S1;

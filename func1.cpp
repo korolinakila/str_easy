@@ -29,7 +29,7 @@ if (itc_len(str) <= 5){
         }
 }
 else{
-    cout << str[0] << str[1] << str[2] << str[itc_len(str)-1] << str[itc_len(str)-2] << str[itc_len(str)-3];
+    cout << str[0] << str[1] << str[2] << str[itc_len(str)-3] << str[itc_len(str)-2] << str[itc_len(str)-1];
 }
 }   //4
 
@@ -42,4 +42,3 @@ for (int i=0; str[i]!='\0'; i++){
 }
 return k;
 }   //5
-

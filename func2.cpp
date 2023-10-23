@@ -38,8 +38,12 @@ string itc_reverse_str(string str){
 
 string itc_slice_str(string str, int start, int end){
 string S1="";
+if(str==""){
+    S1="";
+    return S1;
+}
 if(start>itc_len(str)){
-    for (int i=0; i<=itc_len(str); i++){
+    for (int i=0; i<=itc_len(str)-1; i++){
          S1+= str[i];
     }
     return S1;

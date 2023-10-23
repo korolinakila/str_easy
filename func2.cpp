@@ -52,7 +52,7 @@ if(start>itc_len(str)){
     return S1;
     }
     if(end>itc_len(str)){
-    for (int i=start; i<=itc_len(str); i++){
+    for (int i=start; i<=itc_len(str)-1; i++){
          S1+= str[i];
     }
     return S1;
